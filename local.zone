@@ -1,0 +1,11 @@
+$TTL	7200
+$ORIGIN	local.
+@	1D IN SOA	@ root (
+		2012082901 ; serial
+		3600       ; refresh
+		15         ; retry
+		3000000    ; expire
+		86400 )    ; minimum
+	1D IN NS	@
+	1D IN A		127.0.0.1
+*	1D IN A		127.0.0.1
