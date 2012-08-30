@@ -20,11 +20,11 @@ Backup the original rndc configuration file:
 
 Copy the custom named configuration file:
 
-    sudo cp named.conf /etc/named.conf
+    sudo cp bind/named.conf /etc/named.conf
 
 Copy the custom named zone file:
 
-    sudo cp local.zone /var/named/local.zone
+    sudo cp bind/local.zone /var/named/local.zone
 
 ### Step 3: Enable BIND
 
@@ -51,3 +51,4 @@ Make sure the zone file is setup properly use checkzone:
     rndc reload
     rndc flush
     dscacheutil -flushcache
+
