@@ -36,7 +36,17 @@ Start BIND:
 
     sudo launchctl start org.isc.named
 
-#### Step 4: Validate the configuration
+#### Step 4: Configure local resolver
+
+Create the resolver directory:
+
+    sudo mkdir /etc/resolver
+
+Copy the custom resolver file:
+
+    sudo cp resolver/local /etc/resolver/local
+
+#### Step 5: Validate the configuration
 
 Make sure the named.conf file is setup properly use the built in tool checkconf:
 
@@ -46,7 +56,7 @@ Make sure the zone file is setup properly use checkzone:
 
     named-checkzone local /var/named/local.zone
 
-#### Step 5: Reload the configuration
+#### Step 6: Reload the configuration
 
     rndc reload
     rndc flush
